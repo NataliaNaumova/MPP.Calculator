@@ -94,9 +94,9 @@ namespace CalculatorConsole.CalculatorServiceReference {
         [System.ServiceModel.FaultContractAttribute(typeof(CalculatorConsole.CalculatorServiceReference.MathFault), Action="http://tempuri.org/ICalculator/DivideMathFaultFault", Name="MathFault", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculatorService")]
         double Divide(double number1, double number2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Sqrt", ReplyAction="http://tempuri.org/ICalculator/SqrtResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CalculatorConsole.CalculatorServiceReference.MathFault), Action="http://tempuri.org/ICalculator/SqrtMathFaultFault", Name="MathFault", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculatorService")]
-        double Sqrt(double number);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Sqr", ReplyAction="http://tempuri.org/ICalculator/SqrResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CalculatorConsole.CalculatorServiceReference.MathFault), Action="http://tempuri.org/ICalculator/SqrMathFaultFault", Name="MathFault", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculatorService")]
+        double Sqr(double number);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -142,8 +142,8 @@ namespace CalculatorConsole.CalculatorServiceReference {
             return base.Channel.Divide(number1, number2);
         }
         
-        public double Sqrt(double number) {
-            return base.Channel.Sqrt(number);
+        public double Sqr(double number) {
+            return base.Channel.Sqr(number);
         }
     }
 }

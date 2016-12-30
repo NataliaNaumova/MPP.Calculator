@@ -60,17 +60,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Sqrt">
+  <xs:element name="Sqr">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="number" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SqrtResponse">
+  <xs:element name="SqrResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="SqrtResult" type="xs:double" />
+        <xs:element minOccurs="0" name="SqrResult" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

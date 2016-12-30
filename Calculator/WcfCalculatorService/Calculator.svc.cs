@@ -56,7 +56,7 @@ namespace WcfCalculatorService
             return result;
         }
 
-        public double Sqrt(double number)
+        public double Sqr(double number)
         {
             CheckInput(number);
             double result = Multiply(number, number);

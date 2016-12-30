@@ -43,13 +43,13 @@
   <wsdl:message name="ICalculator_Divide_MathFaultFault_FaultMessage">
     <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfCalculatorService" name="detail" element="q4:MathFault" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Sqrt_InputMessage">
-    <wsdl:part name="parameters" element="tns:Sqrt" />
+  <wsdl:message name="ICalculator_Sqr_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sqr" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Sqrt_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SqrtResponse" />
+  <wsdl:message name="ICalculator_Sqr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SqrResponse" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Sqrt_MathFaultFault_FaultMessage">
+  <wsdl:message name="ICalculator_Sqr_MathFaultFault_FaultMessage">
     <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfCalculatorService" name="detail" element="q5:MathFault" />
   </wsdl:message>
   <wsdl:portType name="ICalculator">
@@ -73,10 +73,10 @@
       <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/ICalculator/DivideMathFaultFault" name="MathFaultFault" message="tns:ICalculator_Divide_MathFaultFault_FaultMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Sqrt">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Sqrt" message="tns:ICalculator_Sqrt_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SqrtResponse" message="tns:ICalculator_Sqrt_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/ICalculator/SqrtMathFaultFault" name="MathFaultFault" message="tns:ICalculator_Sqrt_MathFaultFault_FaultMessage" />
+    <wsdl:operation name="Sqr">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Sqr" message="tns:ICalculator_Sqr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SqrResponse" message="tns:ICalculator_Sqr_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICalculator/SqrMathFaultFault" name="MathFaultFault" message="tns:ICalculator_Sqr_MathFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICalculator" type="tns:ICalculator">
@@ -129,8 +129,8 @@
         <soap:fault use="literal" name="MathFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="Sqrt">
-      <soap:operation soapAction="http://tempuri.org/ICalculator/Sqrt" style="document" />
+    <wsdl:operation name="Sqr">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Sqr" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

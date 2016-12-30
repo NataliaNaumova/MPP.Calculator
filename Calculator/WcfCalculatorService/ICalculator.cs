@@ -31,6 +31,6 @@ namespace WcfCalculatorService
 
         [OperationContract]
         [FaultContract(typeof(MathFault))]
-        double Sqrt(double number);
+        double Sqr(double number);
     }
 }
